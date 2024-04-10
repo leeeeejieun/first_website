@@ -1,33 +1,33 @@
-<!DOCTYPE html>  
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-<title>WEB - PLAVE</title>  
-<meta charset="utp-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login PLLI</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
-<body>
-    <h1>PLAVE</h1>
-
-    <p><o1>
-      <li><a href="index.html" target="_blank"
-          title="plave instruction">PLAVE</a></li>
-      <li><a href="plave members.html" target="_blank"
-          title="plave members instruction">PLAVE MEMBERS</a></li>
-      <li><a href="plave songs.html" target="_blank"
-          title="plave songs instruction">PLAVE SONGS</a></li>    
-  </o1></p>
-
-    <img src="plave.jpg" width="60%" height="25%"><br>
-    <p>플레이브(PLAVE)는 2023년 3월 12일에 데뷔한 블래스트 소속 5인조 버추얼 보이그룹이다. PLAVE는 'Play'와 'Rêve(꿈)'를 결합시켜 만든 이름이며, 
-    자신들의 꿈을 이루기 위해 새로운 세상을 만들어간다는 의미를 담고 있다. 
-    작사, 작곡, 프로듀싱, 안무 창작 등 음반 제작과 무대 활동에 필요한 모든 음악과 퍼포먼스를 멤버 5명이 만드는 자체 제작돌이기도 하다.
-    </p>
-<ol>
-    <li><a href="https://cafe.daum.net/plave/ab6O" 
-    target="_blank" title="PLAVE_cafe.daum"> 공식카페</a></li>
-    <li><a href="https://www.youtube.com/@plave_official"
-    target="_blank" title="PLAVE_youtube channel"> 유튜브</a></li>
-    <li><a href="https://www.instagram.com/plave_official"
-  target="_blank" title="PLAVE_instagram">인스타그램</a></li>
-</ol>
+<body id="Login">
+  <div class="wrapper">
+    <form action="welcom-plave.html">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" required>
+        <i class='bx bxs-lock-alt' ></i>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox">Remember Me</label>
+        <a href="#">Forgot Password</a>
+      </div>
+      <button type="submit" class="btn">Login</button>
+      <div class="register-link">
+        <p>Dont have an account? <a href="#">Register</a></p>
+      </div>
+    </form>
+  </div>
 </body>
+</html>
