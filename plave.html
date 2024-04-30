@@ -1,48 +1,108 @@
 <!DOCTYPE html>  
 <html lang="ko">
 <head>
-<meta charset="utf-8">
- <!-- Google tag (gtag.js) -->
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) 방문자 분석 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGKNB4YQT6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-TGKNB4YQT6');
 </script>
-<title>WEB - PLAVE</title> 
 <link rel="stylesheet" href="style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <div class="name">
-    <h1 class="as-font">PLAVE</h1>
+
+  <header class="header">
+    <a href="main.html" class="logo"><img src="./photo/plave_logo.png"></a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    
+    <nav class="navbar">
+      <a href="main.html" style="--i:0;">ABOUT</a>
+      <a href="plave.html" style="--i:1;">PLAVE</a>
+      <a href="#" style="--i:2;">CONTACT</a>
+    </nav>  
+  </header>
+  
+  <!-- Way 4 luv MV -->
+  <div class="ifr-container">
+    <iframe src="https://www.youtube.com/embed/FxB6_qaqHlY?si=FY9uwxAJ-ICIZYXG&autoplay=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+  
+
+  <div class="container">
+    <p class="title">MEMBER</p>
+      <div class="member">
+      <div class="item">
+          <img src="./photo/Yejun.jpeg">
+          <span class="name">YEJUN</span>
+          <span class="birth">2001.09.12</span>
+          <span class="info">예준(본명 남예준)은 플레이브의 리더로, 보컬과 프로듀싱을 담당하고 있다.</span>
+      </div>
+      <div class="item">
+          <img src="./photo/Noah.jpeg">
+          <span class="name">NOAH</span>
+          <span class="birth">2001.02.10</span>
+          <span class="info">노아(본명 한노아)는 플레이브의 멤버로, 보컬과 프로듀싱을 담당하고 있다.</span>
+      </div>
+      <div class="item">
+          <img src="./photo/Bamby.jpg">
+          <span class="name">BAMBY</span>
+          <span class="birth">2002.07.15</span>
+          <span class="info">밤비(본명 채봉구)는 플레이브의 멤버로, 댄스와 보컬을 담당하고 있다.</span>
+      </div>
+      <div class="item">
+          <img src="./photo/Eunho.jpeg">
+          <span class="name">EUNHO</span>
+          <span class="birth">2003.05.24</span>
+          <span class="info">은호(본명 도은호)는 플레이브의 멤버로, 랩과 보컬, 프로듀싱을 담당하고 있다.</span>
+      </div>
+      <div class="item">
+          <img src="./photo/Hamin.jpeg">
+          <span class="name">HAMIN</span>
+          <span class="birth">????.11.1</span>
+          <span class="info">하민(본명 유하민)은 플레이브의 멤버로, 랩과 댄스를 담당하고 있다.</span>
+      </div>
+    </div>
   </div>
 
-  <div id="grid">
-    <a href="plave.html" target="_blank"
-     title="plave instruction">PLAVE</a>
-    <a href="plave members.html" target="_blank"
-     title="plave members instruction">PLAVE MEMBERS</a>
-    <a href="plave songs.html" target="_blank"
-      title="plave songs instruction">PLAVE SONGS</a>
- </div>
 
-    <div style="text-align: center;">
-    <img src="./photo/plave.jpg" width="90%" height="25%"><br>
+<div class="container">
+  <p class="title">CHANNEL<p>
+    <div class="channel">
+        <a href="https://cafe.daum.net/plave/ab6O" 
+        target="_blank"> Cafe<i class='bx bx-link'></i></a>
+        <a href="https://www.youtube.com/@plave_official"
+        target="_blank"> Youtube<i class='bx bx-link'></i></a>
+        <a href="https://www.instagram.com/plave_official"
+        target="_blank"> Instagram<i class='bx bx-link'></i></a>
+        <a href="https://weverse.io/plave/feed"
+        target="_blank"> Weverse<i class='bx bx-link'></i></a>
+        <a href="https://twitter.com/plave_official"
+        target="_blank"> Twitter<i class='bx bx-link'></i></a>
+        <a href="https://www.tiktok.com/@plave_official"
+        target="_blank"> Tiktok<i class='bx bx-link'></i></a>
+        <a href="https://tv.naver.com/plave"
+        target="_blank"> Naver TV<i class='bx bx-link'></i></a>
+        <a href="https://www.vlastshop.com"
+        target="_blank"> VLAST shop<i class='bx bx-link'></i></a>
     </div>
-    <p style="color: black;">PLAVE(플레이브)는 예준,노아,밤비,은호,하민 5명의 멤버로 구성된 버추얼 보이그룹이다.
-      카엘룸이라는 캐릭터들이 살아가는 세상과 테라(지구) 사이의 아스테룸이라는 신비한 공간에서 테라의 팬들과 소통한다는
-      세계관을 바탕으로 매주 유튜브 라이브를 통해 팬들과 소통하고 있다.
-      23년 3월 12일 '기다릴게'로 데뷔 후 '왜요 왜요 왜?','여섯 번째 여름' 등 발표한 전곡을 멤버들이 집적 작사,작곡하는 
-      뛰어난 실력으로 많은 팬들에게 사랑을 받고 있다.
-    </p>
+</div>
 
-  <p>
-    <div id="disqus_thread"></div>
+<p>
+  <div id="disqus_thread"></div>
 <script>
-    /**
+    /** 댓글 기능
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     /*
@@ -59,6 +119,20 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </p>
+</p>
+
+<!--Start of Tawk.to Script(채팅 기능)-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/660ed50fa0c6737bd1286a04/1hqkv0h9q';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
 </body>
 </html>
