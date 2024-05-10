@@ -19,26 +19,35 @@
 </head>
 
 <body>
+   <!--네비게이션바 구현-->
   <header class="header">
     <a href="main.html" class="logo"><img src="./photo/plave_logo.png"></a>
 
     <input type="checkbox" id="check">
-    <label for="check" class="icons">
+    <!--
+    'label' 태그는 UI 요소에 라벨을 지정할 때 사용
+    (input 태그의 id 값과 label 태그의 for 값이 동일해야 함)
+    아이콘을 클릭했을 때 연결된 체크박스의 상태가 변경됨
+    -->
+    <label for="check" class="heder-icons">  
       <i class='bx bx-menu' id="menu-icon"></i>
       <i class='bx bx-x' id="close-icon"></i>
     </label>
     
+    <!--각 링크의 index 값 부여(transition-delay)-->
     <nav class="navbar">
       <a href="main.html" style="--i:0;">ABOUT</a>
       <a href="plave.html" style="--i:1;">PLAVE</a>
       <a href="#" style="--i:2;">CONTACT</a>
     </nav>  
   </header>
-  
+
+    <!--PLAVE 단체 이미지-->
     <div style="text-align: center;">
     <img src="./photo/plave.jpg" width="90%" height="20%" style="margin-top: 10%"><br>
-  </div>
-
+    </div>
+    
+    <!--PLAVE 소개-->
     <p class="main-info">
       PLAVE(플레이브)는 예준,노아,밤비,은호,하민 5명의 멤버로 구성된 버추얼 보이그룹이다.
       카엘룸이라는 캐릭터들이 살아가는 세상과 테라(지구) 사이의 아스테룸이라는 신비한 공간에서 테라의 팬들과 소통한다는

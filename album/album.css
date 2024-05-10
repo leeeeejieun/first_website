@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.font-name {
+    font-family: "Black Han Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.album-main-container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 7.5rem 0 1.5rem 0;
+    padding: 3%;
+}
+
+.album-img{
+   width: 650px;
+   height: 700px;
+   margin-left: 30px;
+}
+
+.album-img img{
+    width: 100%;
+    height: auto;
+}
+
+.album-inner-container{
+    margin-left: 40px;
+}
+
+.album-name{
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 1.3px;
+}
+
+.album-artist{
+    font-size: 20px;
+    font-weight: 600;
+    color: #CC3366;
+    margin-bottom: 8.5rem;
+}
+
+.info-header{
+    width: 90%;
+    border-bottom: 1px solid #808080;
+    padding-bottom: 7.5px;
+    margin-bottom: 10px;
+}
+
+.album-content{
+    display: flex;
+}
+
+.album-content p{
+    margin-bottom: 10px;
+}
+    
+.album-info{
+    font-weight: bold;
+    margin-right: 4.5rem;
+}
+
+.album-details{
+    color:#808080;
+}
+
+.track-list-container{
+    padding: 0 3%;
+    margin: 0 1.5rem 5rem 1.5rem;
+}
+
+.track-list-container header{
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    border-bottom: 1px solid #808080;
+    padding-bottom: 1.5rem;
+}
+
+.song-container{
+    height: auto;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.song-name, .song-title{
+    position: relative;
+    border-bottom: 1px solid #808080;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.song-name i, .song-title i{
+    position: absolute;
+    right: 10px;
+    font-size: 30px;
+    transform: translateY(-15%);
+}
+
+.song-title::after{
+    content: 'TITLE';
+    color: #CC3366;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.song-name:hover, 
+.song-title:hover{
+    font-weight: bold;
+}
+
+#up-icon{
+    display: none;
+}
+
+.lyrics{
+    display: none;
+    border-bottom: 1px solid #808080;
+    padding: 2.5rem;
+    font-size: 15px;
+    height: 0;
+    opacity: 0;
+    transition: 1s ease;
+}
+
+
+.lyrics-visible {
+    opacity: 1;
+    height: auto;
+}

@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main/style.css">
+    <link rel="stylesheet" href="album.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Asterum-The</title>
+</head>
+<body>
+    <!--네비게이션바 구현-->
+  <header class="header">
+    <a href="/main/main.html" class="logo"><img src="/photo/plave_logo.png"></a>
+
+    <!--
+    'label' 태그는 UI 요소에 라벨을 지정할 때 사용
+    (input 태그의 id 값과 label 태그의 for 값이 동일해야 함)
+    아이콘을 클릭했을 때 연결된 체크박스의 상태가 변경됨
+    -->
+    <input type="checkbox" id="check"> 
+    <label for="check" class="heder-icons">  
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    
+    <!--각 링크의 index 값 부여(transition-delay)-->
+    <nav class="navbar">
+      <a href="/main/main.html" style="--i:0;">ABOUT</a>
+      <a href="/main/plave.html" style="--i:1;">PLAVE</a>
+      <a href="#" style="--i:2;">CONTACT</a>
+    </nav>  
+  </header>
+
+  <!--플레이브 앨범 정보 -->
+  <article class="album-main-container">
+    <div class="album-img">
+        <img src="/photo/asterum_the.jpg">
+    </div>
+
+    <div class="album-inner-container">
+            <h1 class="album-name font-name">
+                ASTERUM : The Shape of
+                <br>
+                Things to Come
+            </h1>
+            <p class="album-artist">PLAVE</p>
+            <p class="info-header">INFO</p>
+    
+        <div class="album-content">
+             <!--발매 정보-->
+            <section class="album-info">
+                <p>발매일</p>
+                <p>장르</p>
+                <p>발매사</p>
+                <p>기획사</p>
+            </section>
+
+            <!--세부 정보-->
+            <section class="album-details">
+                <p>2023.08.24</p>
+                <p>R&B/Soul,댄스,랩/힙합,록/메탈</p>
+                <p>YG PLUS</p>
+                <p>VLAST</p>
+            </section>
+        </div>
+     </div>
+    </article>
+
+    <article class="track-list-container">
+        <header class="track-list-container font-name">TRACK LIST</header>
+
+        <section>
+            <div class="song-name" onclick="viewLyrics(event)">
+                왜요 왜요 왜?
+            </div>
+            <p class="lyrics">
+                <span style="color:rgb(14, 171, 245)">
+                    <strong>* 응원법이 포함된 가사입니다.</strong>
+                </span>
+                <br>
+                <br>
+                Woo woo woo woo woo
+                <br>
+                Woo woo woo woo woo
+                <br>
+                <br>
+                매일 이렇게 난 늘 혼잣말을 해 Always
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                기다릴게
+                </span>
+                <br>
+                <br>
+                Hello, 요즘 어때
+                <br>
+                그래, 여전히 널 그리곤 해
+                <br>
+                수 백 번씩 준비한 birthday
+                <br>
+                아무 일도 없이 지나간 걸
+                <br>
+                <br>
+                Hello, 이 말을 못하고
+                <br>
+                애써 난 무심한 척 너를 지나쳐갔어
+                <br>
+                oh-oh, uh-oh
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                절대
+                </span>
+                난 어울리지 않을 거란 
+                <span style="color:rgb(14, 171, 245)">
+                말로
+                </span>
+                <br>
+                내 감정을 숨겼어
+                <br>
+                별 의미가 없잖아 널 향한 나의 맘이
+                <br>
+                점점 커져서
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                너의 그곳에 내가 닿을 수 있게
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                너의 곁에 내가 숨쉴 수 있길
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                매일 이렇게 난 늘 혼잣말을 해</span>
+                Always
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                Woo woo woo woo woo
+                </span>
+                <br>
+                (Wait for you)
+                <br>
+                여전히
+                <span style="color:rgb(14, 171, 245)">
+                Woo woo woo woo woo
+                </span>
+                <br>
+                (Wait for you)
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                매일 이렇게 난 늘 혼잣말을 해
+                </span>
+                Always
+                <span style="color:rgb(14, 171, 245)">
+                기다릴게
+                </span>
+                <br>
+                <br>
+                꽤나 오랜만인 것 같아
+                <br>
+                떠오르는 건 오직 잘 지냈냐는
+                <span style="color:rgb(14, 171, 245)">
+                    말 밖에
+                </span>
+                <br>
+                아무 소식 없는 널
+                <br>
+                같은 자리에서 기다렸어
+                <br>
+                몇번의 계절이 지나도
+                <span style="color:rgb(14, 171, 245)">
+                너 밖엔
+                </span>
+                <br>
+                <br>
+                생각나지 않고 아무것도 보이지가 않아
+                <br>
+                아무리 노력해봐야 제자리만 맴돌아
+                <br>
+                시작이 다르더라도 괜찮아
+                <br>
+                난 항상 출발선에 멈춰 있으니까
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                너의 그곳에 내가 닿을 수 있게
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                너의 곁에 내가 숨쉴 수 있길
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                매일 이렇게 난 늘 혼잣말을 해</span> 
+                Always
+                <br>
+                <br>
+                어젯밤 꿈속에 활짝 웃는
+                <span style="color:rgb(14, 171, 245)">
+                너를 봤어
+                </span>
+                <br>
+                그런 널 위해 꽃 한 송일 
+                <span style="color:rgb(14, 171, 245)">
+                품에 안고
+                </span>
+                <br>
+                <br>
+                약속을 할 게 두 번 다시 네 손
+                <br>
+                놓지 않을 거라고 woo
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (함성)
+                </span>
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                너의 그곳에 내가 닿을 수 있게
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                너의 곁에 내가 숨쉴 수 있길
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                매일 이렇게 난 늘 혼잣말을 해</span>
+                Always
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (3:25)
+                <br>
+                얘들아 안녕? / 나는 플리야
+                <br>
+                너희가 너무 / 보고싶었어
+                <br>
+                잠깐 기다리니 / 돌아왔구나
+                <br>
+                그게 바로 너구나 / 플레이브
+                </span> 
+                <br>
+                <br>
+                매일 이렇게 난 늘 혼잣말을 해 Always
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                    (기다릴게)
+                </span>
+            </p>
+        </section>
+
+        <section>
+            <div class="song-title" onclick="viewLyrics()"> 
+                여섯 번째 여름
+                    <i class='bx bx-chevron-down' id="down-icon"></i>
+                    <i class='bx bx-chevron-up' id="up-icon"></i>
+            </div>
+            <p class="lyrics">
+                <span style="color:rgb(14, 171, 245)">
+                    <strong>* 응원법이 포함된 가사입니다.</strong>
+                </span>
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                함성
+                </span>
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (0:10)<br>
+                남예준 한노아 채밤비 도은호 유하민<br>
+                사랑해 플레이브!<br>
+                </span>
+                <br>
+                <br>
+                영원을 말했죠
+                <br>
+                꿈이 아니기를
+                <br>
+                혼돈 속을 지나면
+                <br>
+                반짝일 거라고
+                <br>
+                <br>
+                소나기가<span style="color:rgb(14, 171, 245)"> (가)</span> 
+                내려오면<span style="color:rgb(14, 171, 245)"> (면)</span> 
+                <br>
+                이건 잠시뿐일 거야
+                <br>
+                눈이 부신 그날의 기억은
+                <br>
+                기적이니까요
+                <br>
+                <br>
+                좀 더 
+                <span style="color:rgb(14, 171, 245)"> 
+                멀리멀리
+                </span> 
+                <br>
+                닿을 수 있을까
+                <br>
+                길고 긴 
+                <span style="color:rgb(14, 171, 245)"> 
+                여정에
+                </span> 
+                <br>
+                마침표를 찍을 수만 있다면
+                <br>
+                <br>
+                마지막 땀방울의 결말은
+                <br>
+                헛된 길이 아닐 걸 잘 알아
+                <br>
+                <br>
+                반복되는 계절의 중간에 
+                <span style="color:rgb(14, 171, 245)"> 
+                있어
+                </span> 
+                <br>
+                그토록 바랬던 어둠 속의 빛을 찾고 말았어
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)"> 
+                너에게
+                </span> 
+                로 달려가는 이 시공간을 넘어서
+                <br>
+                닿은 이곳은 여섯 번째
+                <br>
+                여름의 시작이었단 걸
+                <br>
+                <span style="color:rgb(14, 171, 245)"> 
+                꿈꿨어
+                </span> 
+                <br>
+                <br>
+                푸른 하늘, 마치 눈물 같아<span style="color:rgb(14, 171, 245)"> (아)</span> 
+                <br>
+                날이 밝아도 결국 쏟아진다<span style="color:rgb(14, 171, 245)"> (다)</span> 
+                <br>
+                하염없이 달려온 길 위 oh
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)"> 
+                속도를 올렸어
+                </span> 
+                <br>
+                망설이다 전부 다 놓쳐 버릴까<span style="color:rgb(14, 171, 245)"> 또</span> 
+                <br>
+                일곱 번의 여름은 없을 거라<span style="color:rgb(14, 171, 245)"> 고</span> 
+                <br>
+                끝이 없던 평행곡선
+                <br>
+                결국 같은 곳을 지나왔어
+                <br>
+                <br>
+                좀 더 
+                <span style="color:rgb(14, 171, 245)"> 
+                멀리멀리
+                </span> 
+                <br>
+                닿을 수 있을까
+                <br>
+                길고 긴 
+                <span style="color:rgb(14, 171, 245)"> 
+                여정에
+                </span> 
+                <br>
+                마침표를 찍을 수만 있다면
+                <br>
+                <br>
+                마지막 땀방울의 결말은
+                <br>
+                헛된 길이 아닐 걸 잘 알아
+                <br>
+                <br>
+                반복되는 계절의 중간에 
+                <span style="color:rgb(14, 171, 245)"> 
+                있어
+                </span> 
+                <br>
+                그토록 바랬던 어둠 속의 빛을 찾고 말았어
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)"> 
+                너에게
+                </span> 
+                로 달려가는 이 시공간을 넘어서
+                <br>
+                닿은 이곳은 여섯 번째
+                <br>
+                여름의 시작이었단 걸
+                <br>
+                <span style="color:rgb(14, 171, 245)"> 
+                꿈꿨어
+                </span> 
+                <br>
+                <br>
+                꿈일까 꿈일까
+                <br>
+                우리 함께하는 이 순간
+                <br>
+                <span style="color:rgb(14, 171, 245)"> 
+                (꿈같아)
+                </span> 
+                <br>
+                <br>
+                마법 같은 하루가
+                <br>
+                (결국엔 사라질까)
+                <br>
+                <br>
+                그칠까 그칠까 찬란히
+                <br>
+                반짝이던 눈물의 기적
+                <br>
+                빛나줘
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (함성)
+                </span>
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (3:01)<br>
+                남예준 한노아 채밤비 도은호 유하민<br>
+                플레이브 영 원 하 자!<br>
+                </span>
+                <br>
+                <br>
+                반복되는 계절의 중간에 
+                <span style="color:rgb(14, 171, 245)"> 
+                있어
+                </span> 
+                <br>
+                그토록 바랬던 어둠 속의 빛을 찾고 말았어
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)"> 
+                너에게
+                </span> 
+                로 달려가는 이 시공간을 넘어서
+                <br>
+                닿은 이곳은 여섯 번째
+                <br>
+                여름의 시작이었단 걸
+                <br>
+                꿈꿨어
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (환호)
+                </span>
+            </p>
+        </section>
+
+        <section>
+            <div class="song-name" onclick="viewLyrics(event)"> 
+                I just love ya
+            </div>
+            <p class="lyrics">
+                반짝이는 별 아래
+                <br>
+                (너의 미소 너무 아름다워)
+                <br>
+                이 순간을 기억해
+                <br>
+                영원히 간직할게 이 Story
+                <br>
+                <br>
+                너를 향해 난 직진
+                <br>
+                밝게 빛나 넌 Bling Bling
+                <br>
+                <br>
+                Yeah 타오르는 불씨처럼 뜨거운 내 마음
+                <br>
+                너도 같은 마음이길 바래 언제든 Hoo
+                <br>
+                <br>
+                Feel like I’m dreamin’ 너를 볼 땐
+                <br>
+                Eh oh eh oh eh oh
+                <br>
+                You are the reason that I’m breathin’
+                <br>
+                Eh oh eh oh
+                <br>
+                <br>
+                I just love you
+                <br>
+                계속 널 바라볼게
+                <br>
+                All day won’t stop yeah
+                <br>
+                Just love you
+                <br>
+                늘 곁에 있어줄게
+                <br>
+                변치 않을게 Promise
+                <br>
+                환하게 웃어줄 때면 밤하늘도 밝게 빛나
+                <br>
+                Just love you
+                <br>
+                이 순간을 기억해
+                <br>
+                Could you be my star always?
+                <br>
+                <br>
+                무르익어 가는 분위기
+                <br>
+                속에 네 모습 아름다워
+                <br>
+                (See ya!)
+                <br>
+                너만 보여 난
+                <br>
+                해가 뜨면
+                <br>
+                <br>
+                우린 사인 달라져 있을까
+                <br>
+                친구 그 이상이 되고 싶어 네겐
+                <br>
+                널 좀 더 가까이서 더 챙겨 주고만 싶어 난
+                <br>
+                <br>
+                Feel like I’m dreamin’ 너를 볼 땐
+                <br>
+                Eh oh eh oh eh oh
+                <br>
+                You are the reason that I’m breathin’
+                <br>
+                Eh oh eh oh
+                <br>
+                <br>
+                I just love you
+                <br>
+                계속 널 바라볼게
+                <br>
+                All day won’t stop yeah
+                <br>
+                Just love you
+                <br>
+                늘 곁에 있어 줄게
+                <br>
+                변치 않을게 Promise
+                <br>
+                환하게 웃어줄 때면 밤하늘도 밝게 빛나
+                <br>
+                Just love you
+                <br>
+                이 순간을 기억해
+                <br>
+                Could you be my star always?
+                <br>
+                <br>
+                지켜봐
+                <br>
+                주기만 해 Babe
+                <br>
+                또 믿어 날
+                <br>
+                손을 잡아줄래
+                <br>
+                Where we go where we go where we go
+                <br>
+                어디라도 행복이 가득할 테니
+                <br>
+                환하게 웃어줄 때면 밤하늘도 밝게 빛나
+                <br>
+                Just love you
+                <br>
+                이 순간을 기억해
+                <br>
+                Could you be my star always?
+                <br>
+                <br>
+                영원히 널 사랑할게
+                <br>
+                Could you be my star always?
+            </p>
+        </section>
+
+        <section>
+            <div class="song-name" onclick="viewLyrics(event)"> 
+                Dear.PLLI
+            </div>
+            <p class="lyrics">
+                I feel so special
+                <br>
+                아침에 눈을 떴을 때
+                <br>
+                나의 옆에서
+                <br>
+                You’re my treasure
+                <br>
+                니가 있다는 게 그저
+                <br>
+                꿈만 같아서
+                <br>
+                어젯밤 나눴었던 수많은
+                <br>
+                말들 속에서
+                <br>
+                Oh oh 우린 약속했죠
+                <br>
+                황홀했던 Sweet night
+                <br>
+                <br>
+                Dear my playlist playlist playlist
+                <br>
+                Whole life
+                <br>
+                Be my playlist playlist playlist
+                <br>
+                I Pray
+                <br>
+                아침부터 밤새워 니 목소리로
+                <br>
+                가득 채워줘서 고마워
+                <br>
+                평생을 함께해 줄
+                <br>
+                PLLIs PLLIs PLLIs
+                <br>
+                Call me up! Always
+                <br>
+                by your side woo woo
+                <br>
+                <br>
+                그렇게 나의 눈을 맞춰줘
+                <br>
+                예쁜 니 마음들이 번져서
+                <br>
+                그 모습 그대로만 있어줘
+                <br>
+                널 항상 지킬 테니
+                <br>
+                아무 걱정 말아 넌
+                <br>
+                <br>
+                My honey, could
+                <br>
+                you be my only one
+                <br>
+                I don’t see other difference
+                <br>
+                between you and me,
+                <br>
+                my love
+                <br>
+                And You know what? Umm..
+                <br>
+                자연스러운 모습이
+                <br>
+                넌 더 예뻐 꾸밈없이
+                <br>
+                너를 더 보여줘 PLLIs
+                <br>
+                <br>
+                Lovey-Dovey Lovey-Dovey love Yeah
+                <br>
+                Oh oh oh oh
+                <br>
+                <br>
+                Dear my playlist playlist playlist
+                <br>
+                Whole life
+                <br>
+                Be my playlist playlist playlist
+                <br>
+                I Pray
+                <br>
+                아침부터 밤새워 네 목소리로
+                <br>
+                가득 채워줘서 고마워
+                <br>
+                평생을 함께해 줄
+                <br>
+                PLLIs PLLIs PLLIs
+                <br>
+                Call me up! Always by your side woo woo
+                <br>
+                <br>
+                How could you be
+                <br>
+                so pretty 놀라워
+                <br>
+                우리 처음 본 그 순간부터
+                <br>
+                정해졌던 운명
+                <br>
+                이 너라고 난 확신했어
+                <br>
+                꿈이 아니라면
+                <br>
+                내 손을 잡아줘 바로
+                <br>
+                지금 Right
+                <br>
+                <br>
+                It’s all yours, PLLI
+                <br>
+                <br>
+                Dear my playlist playlist playlist
+                <br>
+                Whole life
+                <br>
+                Be my playlist playlist playlist
+                <br>
+                I Pray
+                <br>
+                아침부터 밤새워 네 목소리로
+                <br>
+                가득 채워줘서 고마워
+                <br>
+                평생을 함께해 줄
+                <br>
+                PLLIs PLLIs PLLIs
+                <br>
+                Call me up! Always
+                <br>
+                by your side woo woo
+            </p>
+        </section>
+
+        <section>
+            <div class="song-name">외계어 송 DEMO (CD Only)</div>
+        </section>
+    </article>
+
+    <script>
+        iconAdd();
+    </script>
+
+</body>
+</html>

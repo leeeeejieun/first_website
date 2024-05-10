@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main/style.css">
+    <link rel="stylesheet" href="album.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Asterum</title>
+</head>
+<body>
+    <!--네비게이션바 구현-->
+  <header class="header">
+    <a href="/main/main.html" class="logo"><img src="/photo/plave_logo.png"></a>
+
+    <!--
+    'label' 태그는 UI 요소에 라벨을 지정할 때 사용
+    (input 태그의 id 값과 label 태그의 for 값이 동일해야 함)
+    아이콘을 클릭했을 때 연결된 체크박스의 상태가 변경됨
+    -->
+    <input type="checkbox" id="check"> 
+    <label for="check" class="heder-icons">  
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    
+    <!--각 링크의 index 값 부여(transition-delay)-->
+    <nav class="navbar">
+      <a href="/main/main.html" style="--i:0;">ABOUT</a>
+      <a href="/main/plave.html" style="--i:1;">PLAVE</a>
+      <a href="#" style="--i:2;">CONTACT</a>
+    </nav>  
+  </header>
+
+  <!--플레이브 앨범 정보 -->
+  <article class="album-main-container">
+    <div class="album-img">
+        <img src="/photo/asterum.jpeg">
+    </div>
+
+    <div class="album-inner-container">
+            <h1 class="album-name font-name">Asterum</h1>
+            <p class="album-artist">PLAVE</p>
+            <p class="info-header">INFO</p>
+    
+        <div class="album-content">
+             <!--발매 정보-->
+            <section class="album-info">
+                <p>발매일</p>
+                <p>장르</p>
+                <p>발매사</p>
+                <p>기획사</p>
+            </section>
+
+            <!--세부 정보-->
+            <section class="album-details">
+                <p>2023.03.12</p>
+                <p>록/메탈, 댄스</p>
+                <p>YG PLUS</p>
+                <p>VLAST</p>
+            </section>
+        </div>
+     </div>
+    </article>
+
+    <article class="track-list-container">
+        <header class="track-list-container font-name">TRACK LIST</header>
+
+        <section>
+            <div class="song-title" onclick="viewLyrics(event)">
+                1. 기다릴게
+            </div>
+            <p class="lyrics">
+                <span style="color:rgb(14, 171, 245)">
+                    <strong>* 응원법이 포함된 가사입니다.</strong>
+                </span>
+                <br>
+                <br>
+                Woo woo woo woo woo
+                <br>
+                Woo woo woo woo woo
+                <br>
+                <br>
+                매일 이렇게 난 늘 혼잣말을 해 Always
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                기다릴게
+                </span>
+                <br>
+                <br>
+                Hello, 요즘 어때
+                <br>
+                그래, 여전히 널 그리곤 해
+                <br>
+                수 백 번씩 준비한 birthday
+                <br>
+                아무 일도 없이 지나간 걸
+                <br>
+                <br>
+                Hello, 이 말을 못하고
+                <br>
+                애써 난 무심한 척 너를 지나쳐갔어
+                <br>
+                oh-oh, uh-oh
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                절대
+                </span>
+                난 어울리지 않을 거란 
+                <span style="color:rgb(14, 171, 245)">
+                말로
+                </span>
+                <br>
+                내 감정을 숨겼어
+                <br>
+                별 의미가 없잖아 널 향한 나의 맘이
+                <br>
+                점점 커져서
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                너의 그곳에 내가 닿을 수 있게
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                너의 곁에 내가 숨쉴 수 있길
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                매일 이렇게 난 늘 혼잣말을 해</span>
+                Always
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                Woo woo woo woo woo
+                </span>
+                <br>
+                (Wait for you)
+                <br>
+                여전히
+                <span style="color:rgb(14, 171, 245)">
+                Woo woo woo woo woo
+                </span>
+                <br>
+                (Wait for you)
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                매일 이렇게 난 늘 혼잣말을 해
+                </span>
+                Always
+                <span style="color:rgb(14, 171, 245)">
+                기다릴게
+                </span>
+                <br>
+                <br>
+                꽤나 오랜만인 것 같아
+                <br>
+                떠오르는 건 오직 잘 지냈냐는
+                <span style="color:rgb(14, 171, 245)">
+                    말 밖에
+                </span>
+                <br>
+                아무 소식 없는 널
+                <br>
+                같은 자리에서 기다렸어
+                <br>
+                몇번의 계절이 지나도
+                <span style="color:rgb(14, 171, 245)">
+                너 밖엔
+                </span>
+                <br>
+                <br>
+                생각나지 않고 아무것도 보이지가 않아
+                <br>
+                아무리 노력해봐야 제자리만 맴돌아
+                <br>
+                시작이 다르더라도 괜찮아
+                <br>
+                난 항상 출발선에 멈춰 있으니까
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                너의 그곳에 내가 닿을 수 있게
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                너의 곁에 내가 숨쉴 수 있길
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                매일 이렇게 난 늘 혼잣말을 해</span> 
+                Always
+                <br>
+                <br>
+                어젯밤 꿈속에 활짝 웃는
+                <span style="color:rgb(14, 171, 245)">
+                너를 봤어
+                </span>
+                <br>
+                그런 널 위해 꽃 한 송일 
+                <span style="color:rgb(14, 171, 245)">
+                품에 안고
+                </span>
+                <br>
+                <br>
+                약속을 할 게 두 번 다시 네 손
+                <br>
+                놓지 않을 거라고 woo
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (함성)
+                </span>
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                너의 그곳에 내가 닿을 수 있게
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                너의 곁에 내가 숨쉴 수 있길
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                매일 이렇게 난 늘 혼잣말을 해</span>
+                Always
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (3:25)
+                <br>
+                얘들아 안녕? / 나는 플리야
+                <br>
+                너희가 너무 / 보고싶었어
+                <br>
+                잠깐 기다리니 / 돌아왔구나
+                <br>
+                그게 바로 너구나 / 플레이브
+                </span> 
+                <br>
+                <br>
+                매일 이렇게 난 늘 혼잣말을 해 Always
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                    (기다릴게)
+                </span>
+            </p>
+        </section>
+
+        <section>
+            <div class="song-name" onclick="viewLyrics(event)">
+                2. Pixel world
+            </div>
+            
+            <p class="lyrics">
+                <span style="color:rgb(14, 171, 245)">
+                    <strong>* 응원법이 포함된 가사입니다.</strong>
+                </span>
+                <br>
+                <br>
+                회색 빛 
+                <span style="color:rgb(14, 171, 245)">
+                (gray)
+                </span>
+                도시 속
+                <span style="color:rgb(14, 171, 245)">
+                (city)
+                </span>
+                <br>
+                날 깨워주는 너의
+                <span style="color:rgb(14, 171, 245)">
+                color
+                </span>
+                <br>
+                <br>
+                너로 인해
+                <span style="color:rgb(14, 171, 245)">
+                (you)
+                </span>
+                나 숨을 쉬어
+                <span style="color:rgb(14, 171, 245)">
+                (breathe)
+                </span>
+                <br>
+                내 안에 온기를
+                <span style="color:rgb(14, 171, 245)">
+                더해
+                </span>
+                <br>
+                <br>
+                마지막 퍼즐이 맞춰지<span style="color:rgb(14, 171, 245)">고</span>
+                <br>
+                끝끝내 완성된 
+                <span style="color:rgb(14, 171, 245)">
+                pixel world
+                </span>
+                <br>
+                <br>
+                참 많이 기다렸지
+                <br>
+                Uhm..(ha) you know? Yeah
+                <br>
+                <br>
+                오래도록 꿈꿔왔던 이 순간
+                <span style="color:rgb(14, 171, 245)">
+                (함성)
+                </span>
+                <br>
+                현실이 됐어
+                <span style="color:rgb(14, 171, 245)">
+                (look)
+                </span>
+                <br>
+                <br>
+                하루의 끝에
+                <span style="color:rgb(14, 171, 245)">
+                너와 나
+                </span>
+                <br>
+                우린 시작을 해
+                <span style="color:rgb(14, 171, 245)">
+                tonight
+                </span>
+                <br>
+                <br>
+                I wanna love
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (Hey)
+                </span>
+                <br>
+                You wanna love
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (ho)
+                </span>
+                <br>
+                We are making new world
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                Let’s dance
+                </span>
+                <br>
+                <br>
+                손을 들어 높이
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (모두 put your hands up)
+                </span>
+                <br>
+                내일 따윈 없지
+                <span style="color:rgb(14, 171, 245)">
+                (불필요해 맨 정신)
+                </span>
+                <br>
+                <br>
+                불태워 다 let’s rock all night
+                Come in our pixel world
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                Come in our pixel world
+                </span>
+                <br>
+                <br>
+                let’s break it now 틀에 박힌 rules
+                <br>
+                I don’t lose 너를 위한 move
+                <br>
+                보여줄게 prove (yeah)
+                <br>
+                <br>
+                Shine bright 밝은 빛으로 어두운
+                <br>
+                세계를 밝혀 외로운 날
+                <br>
+                이제는 없을테니 I promise
+                <br>
+                <br>
+                I’m falling love
+                <br>
+                하얗게 물들어
+                <br>
+                Like falling snow
+                <br>
+                <br>
+                눈부신 별빛아래 우리는 하나가 돼
+                <span style="color:rgb(14, 171, 245)">
+                우리는 하나가 돼
+                </span>
+                <br>
+                늘 같이 걸어 갈래 끝없는
+                <span style="color:rgb(14, 171, 245)">
+                은하계
+                </span>
+                <br>
+                <br>
+                오래도록 꿈꿔왔던 이 순간
+                <span style="color:rgb(14, 171, 245)">
+                (함성)
+                </span>
+                <br>
+                현실이 됐어
+                <span style="color:rgb(14, 171, 245)">
+                (look)
+                </span>
+                <br>
+                <br>
+                하루의 끝에
+                <span style="color:rgb(14, 171, 245)">
+                너와 나
+                </span>
+                <br>
+                우린 시작을 해
+                <span style="color:rgb(14, 171, 245)">
+                tonight
+                </span>
+                <br>
+                <br>
+                I wanna love
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (Hey)
+                </span>
+                <br>
+                You wanna love
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (ho)
+                </span>
+                <br>
+                We are making new world
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                Let’s dance
+                </span>
+                <br>
+                <br>
+                손을 들어 높이
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (모두 put your hands up)
+                </span>
+                <br>
+                내일 따윈 없지
+                <span style="color:rgb(14, 171, 245)">
+                (불필요해 맨 정신)
+                </span>
+                <br>
+                <br>
+                불태워 다 let’s rock all night
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                Come in our pixel world
+                </span>
+                <br>
+                <br>
+                미소를 머금은 눈빛에
+                <br>
+                난 녹아 버릴 거 같은데
+                <br>
+                Woo uh 놓지 않을 게
+                <br>
+                (Your hand, your heart, your breath)
+                <br>
+                I’m melting cause of you
+                <br>
+                <br>
+                하루의 끝에
+                <span style="color:rgb(14, 171, 245)">
+                너와 나
+                </span>
+                <br>
+                우린 시작을 해
+                <span style="color:rgb(14, 171, 245)">
+                tonight
+                </span>
+                <br>
+                <br>
+                I wanna love
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (Hey)
+                </span>
+                <br>
+                You wanna love
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (ho)
+                </span>
+                <br>
+                We are making new world
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                Let’s dance
+                </span>
+                <br>
+                <br>
+                손을 들어 높이
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (모두 put your hands up)
+                </span>
+                <br>
+                내일 따윈 없지
+                <span style="color:rgb(14, 171, 245)">
+                (불필요해 맨 정신)
+                </span>
+                <br>
+                <br>
+                불태워 다 let’s rock all night
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                Come in our pixel world
+                </span>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                Come in our pixel world
+                </span>
+                <br>
+                <br>
+                We show another world
+                <br>
+                We show another world
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                    Hey ho Hey ho
+                </span>
+                <br>
+                오늘이야 let’s rock all night
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                Come in our pixel world
+                </span>
+            </p>
+        </section>
+
+        <section>
+            <div class="song-name">3. 기다릴게(inst)</div>
+        </section>
+    </article>
+
+    <script>
+        iconAdd();
+    </script>
+
+</body>
+</html>

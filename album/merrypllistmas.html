@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main/style.css">
+    <link rel="stylesheet" href="album.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Asterum</title>
+</head>
+<body>
+    <!--네비게이션바 구현-->
+  <header class="header">
+    <a href="/main/main.html" class="logo"><img src="/photo/plave_logo.png"></a>
+
+    <!--
+    'label' 태그는 UI 요소에 라벨을 지정할 때 사용
+    (input 태그의 id 값과 label 태그의 for 값이 동일해야 함)
+    아이콘을 클릭했을 때 연결된 체크박스의 상태가 변경됨
+    -->
+    <input type="checkbox" id="check"> 
+    <label for="check" class="heder-icons">  
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    
+    <!--각 링크의 index 값 부여(transition-delay)-->
+    <nav class="navbar">
+      <a href="/main/main.html" style="--i:0;">ABOUT</a>
+      <a href="/main/plave.html" style="--i:1;">PLAVE</a>
+      <a href="#" style="--i:2;">CONTACT</a>
+    </nav>  
+  </header>
+
+  <!--플레이브 앨범 정보 -->
+  <article class="album-main-container">
+    <div class="album-img">
+        <img src="/photo/merrypllistmas.jpg">
+    </div>
+
+    <div class="album-inner-container">
+            <h1 class="album-name font-name">Merry PLLIstmas</h1>
+            <p class="album-artist">PLAVE</p>
+            <p class="info-header">INFO</p>
+    
+        <div class="album-content">
+             <!--발매 정보-->
+            <section class="album-info">
+                <p>발매일</p>
+                <p>장르</p>
+                <p>발매사</p>
+                <p>기획사</p>
+            </section>
+
+            <!--세부 정보-->
+            <section class="album-details">
+                <p>2023.12.12</p>
+                <p>R&B/Soul</p>
+                <p>YG PLUS</p>
+                <p>VLAST</p>
+            </section>
+        </div>
+     </div>
+    </article>
+
+    <article class="track-list-container">
+        <header class="track-list-container font-name">TRACK LIST</header>
+
+        <section>
+            <div class="song-title" onclick="viewLyrics(event)">
+                Merry PLLIstmas
+            </div>
+            <p class="lyrics">
+                Starry night, 오늘을 준비했어
+                <br>
+                널 위한 노래와 크리스마스 선물들이
+                <br>
+                떨리는 내 심장소린
+                <br>
+                널 향한 연주가 되었죠, whoa
+                <br>
+                <br>
+                Mistletoe, 우리들의 멜로디
+                <br>
+                하얀솜 쌓여가는 이야기
+                <br>
+                따듯한 겨울눈이 falling (falling)
+                <br>
+                산타는 없죠
+                <br>
+                <br>
+                Say I love you
+                <br>
+                Don't leave me alone
+                <br>
+                I will tell you one thing, lady
+                <br>
+                사랑에 빠져버린 것 같아, whoa-ooh-ooh
+                <br>
+                <br>
+                꿈을 꾼다 흰 눈이 널 닮은 이 순간
+                <br>
+                멜로 영화처럼, 마침내 우린 결말이 되었죠
+                <br>
+                Christmas for you
+                <br>
+                꿈만 같아, 온 세상이 멈춘 이 순간 너를 바라볼 때
+                <br>
+                눈송이가 수많은 별이 되어
+                <br>
+                반짝일 거야 사랑일까?
+                <br>
+                <br>
+                Yeah, 새하얀 눈이 (펑펑) 내리는 거리 (펑펑)
+                <br>
+                만나러 가지 떨리는 아이 Christmas party, yeah (뿌슈)
+                <br>
+                12시 지나면 종이 울릴 텐데
+                <br>
+                I swear to God, I'll love you forever, babe
+                <br>
+                <br>
+                Say I love you
+                <br>
+                Don't leave me alone
+                <br>
+                I will tell you one thing, lady
+                <br>
+                사랑에 빠져버린 것 같아, whoa-ooh-ooh
+                <br>
+                <br>
+                꿈을 꾼다 흰 눈이 널 닮은 이 순간
+                <br>
+                멜로 영화처럼, 마침내 우린 결말이 되었죠
+                <br>
+                Christmas for you (ooh-ooh)
+                <br>
+                꿈만 같아, 온 세상이 멈춘 이 순간 너를 바라볼 때
+                <br>
+                눈송이가 수많은 별이 되어
+                <br>
+                반짝일 거야
+                <br>
+                <br>
+                눈이 내리죠, 그대 올까요?
+                <br>
+                혹시라도 내가 놓칠까 봐
+                <br>
+                그대가 보여 내리는 눈 사이로
+                <br>
+                Ooh, ooh, ooh, ooh
+                <br>
+                <br>
+                꿈을 꾼다 흰 눈이 널 닮은 이 순간
+                <br>
+                멜로 영화처럼, 마침내 우린 결말이 되었죠
+                <br>
+                Christmas for you (ooh)
+                <br>
+                꿈만 같아 (oh), 온 세상이 멈춘 이 순간 너를 바라볼 때
+                <br>
+                눈송이가 수많은 별이 되어
+                <br>
+                반짝일 거야
+                <br>
+                <br>
+                Merry Christmas!
+            </p>
+        </section>
+    </article>
+
+    <script>
+        iconAdd();
+    </script>
+</body>
+</html>

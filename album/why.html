@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main/style.css">
+    <link rel="stylesheet" href="album.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Asterum</title>
+</head>
+<body>
+    <!--네비게이션바 구현-->
+  <header class="header">
+    <a href="/main/main.html" class="logo"><img src="/photo/plave_logo.png"></a>
+
+    <!--
+    'label' 태그는 UI 요소에 라벨을 지정할 때 사용
+    (input 태그의 id 값과 label 태그의 for 값이 동일해야 함)
+    아이콘을 클릭했을 때 연결된 체크박스의 상태가 변경됨
+    -->
+    <input type="checkbox" id="check"> 
+    <label for="check" class="heder-icons">  
+      <i class='bx bx-menu' id="menu-icon"></i>
+      <i class='bx bx-x' id="close-icon"></i>
+    </label>
+    
+    <!--각 링크의 index 값 부여(transition-delay)-->
+    <nav class="navbar">
+      <a href="/main/main.html" style="--i:0;">ABOUT</a>
+      <a href="/main/plave.html" style="--i:1;">PLAVE</a>
+      <a href="#" style="--i:2;">CONTACT</a>
+    </nav>  
+  </header>
+
+  <!--플레이브 앨범 정보 -->
+  <article class="album-main-container">
+    <div class="album-img">
+        <img src="/photo/why.jpg">
+    </div>
+
+    <div class="album-inner-container">
+            <h1 class="album-name font-name">왜요 왜요 왜?</h1>
+            <p class="album-artist">PLAVE</p>
+            <p class="info-header">INFO</p>
+    
+        <div class="album-content">
+             <!--발매 정보-->
+            <section class="album-info">
+                <p>발매일</p>
+                <p>장르</p>
+                <p>발매사</p>
+                <p>기획사</p>
+            </section>
+
+            <!--세부 정보-->
+            <section class="album-details">
+                <p>2023.05.25</p>
+                <p>랩/힙합</p>
+                <p>YG PLUS</p>
+                <p>VLAST</p>
+            </section>
+        </div>
+     </div>
+    </article>
+
+    <article class="track-list-container">
+        <header class="track-list-container font-name">TRACK LIST</header>
+
+        <section>
+            <div class="song-title" onclick="viewLyrics(event)">
+                왜요 왜요 왜?
+            </div>
+            <p class="lyrics">
+                <span style="color:rgb(14, 171, 245)">
+                    <strong>* 응원법이 포함된 가사입니다.</strong>
+                </span>
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (0:05 ~ 0:09)
+                <br>
+                플 레 이 브 왜 요 왜요왜
+                <br>
+                </span>
+                <br>
+                <br>
+                Make you go
+                <span style="color:rgb(14, 171, 245)">
+                click click
+                </span>
+                <span style="color:rgb(14, 171, 245)">
+                click click
+                </span>
+                <br>
+                Make you go
+                <span style="color:rgb(14, 171, 245)">
+                mad mad
+                </span>
+                <br>
+                Make you go
+                <span style="color:rgb(14, 171, 245)">
+                    rec rec
+                </span>
+                <br>
+                <br>
+                I know I know 뻔해
+                <br>
+                <br>
+                너 정말 왜요
+                <span style="color:rgb(14, 171, 245)">
+                왜요 왜
+                </span>
+                <br>
+                왜요
+                <span style="color:rgb(14, 171, 245)">
+                왜요 왜
+                </span>
+                <br>
+                I don’t wanna hear anymore
+                <span style="color:rgb(14, 171, 245)">
+                (nope nope nope)
+                </span>
+                <br>
+                <br>
+                저한테 왜요
+                <span style="color:rgb(14, 171, 245)">
+                왜요 왜
+                </span>
+                <br>
+                왜요
+                <span style="color:rgb(14, 171, 245)">
+                왜요 왜
+                </span>
+                <br>
+                I don’t wanna feel (nope nope nope)
+                <span style="color:rgb(14, 171, 245)">
+                (함성)
+                </span>
+                <br>
+                <br>
+                We make a trend 흔해빠진 밈들은 전부 **** off
+                <span style="color:rgb(14, 171, 245)">
+                (넣어둬)
+                </span>
+                <br>
+                We make a friend 트렌드를 아는 freak 모두 모여
+                <span style="color:rgb(14, 171, 245)">
+                (여기로)
+                </span>
+                <br>
+                <br>
+                멋을 아는 shake it
+                <span style="color:rgb(14, 171, 245)">
+                (뿌뿌)
+                </span>
+                <br>
+                Muscle 위한 프로틴
+                <span style="color:rgb(14, 171, 245)">
+                (yeah buddy)
+                </span>
+                <br>
+                안오는 놈들은 뭐야
+                <br>
+                나 집에 안갈꼬야
+                <span style="color:rgb(14, 171, 245)">
+                (가지마)
+                </span>
+                <br>
+                <br>
+                Tell me what you want 더 보여줄게
+                <br>
+                Tell me what you do I’ll be your Rolex
+                <span style="color:rgb(14, 171, 245)">
+                (함성)
+                </span>
+                <br>
+                <br>
+                너 정말 왜요
+                <span style="color:rgb(14, 171, 245)">
+                왜요 왜
+                </span>
+                <br>
+                왜요
+                <span style="color:rgb(14, 171, 245)">
+                왜요 왜
+                </span>
+                <br>
+                I don’t wanna hear anymore
+                <span style="color:rgb(14, 171, 245)">
+                (nope nope nope)
+                </span>
+                <br>
+                <br>
+                저한테 왜요
+                <span style="color:rgb(14, 171, 245)">
+                왜요 왜
+                </span>
+                <br>
+                왜요
+                <span style="color:rgb(14, 171, 245)">
+                왜요 왜
+                </span>
+                <br>
+                I don’t wanna feel (nope nope nope)
+                <span style="color:rgb(14, 171, 245)">
+                (함성)
+                </span>
+                <br>
+                <br>
+                Day & night 언제나 너의 곁에 있을게 (always)
+                <br>
+                이런말 하고 싶지 않지만 널 기다린 나란 말야 (bow wow)
+                <span style="color:rgb(14, 171, 245)">
+                (기다릴게)
+                </span>
+                <br>
+                <br>
+                너 정말 왜요
+                <span style="color:rgb(14, 171, 245)">
+                왜요 왜
+                </span>
+                <br>
+                왜요
+                <span style="color:rgb(14, 171, 245)">
+                왜요 왜
+                </span>
+                <br>
+                I don’t wanna hear anymore
+                <span style="color:rgb(14, 171, 245)">
+                (nope nope nope)
+                </span>
+                <br>
+                <br>
+                저한테 왜요 왜요 왜
+                <br>
+                왜요 왜요 왜
+                <br>
+                I don’t wanna feel anymore (nope nope nope)
+                <br>
+                <br>
+                (간주중)
+                <br>
+                <br>
+                <span style="color:rgb(14, 171, 245)">
+                (2:15)
+                <br>
+                남예준 한노아 채밤비 도은호 유하민
+                <br>
+                사랑해 플 레 이 브
+                </span>
+            </p>
+        </section>
+    </article>
+    
+        <script>
+            iconAdd();
+        </script>
+</body>
+</html>
