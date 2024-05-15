@@ -36,9 +36,12 @@ const iconAdd = () =>{
     up_icon.id='up-icon'
     down_icon.id='down-icon'
   
-    // icon을 부모 요소에 추가
-    ParentElement.append(up_icon);
-    ParentElement.append(down_icon);
+    /*
+     해당 요소들을 부모 노드의 자식 노드 리스트의 마지막에 추가
+     append() : 여러 요소 추가 메서드
+     appendChild() : 단일 요소 추가 메서드
+    */
+    ParentElement.append(up_icon, down_icon);
     }
   );
 }
@@ -46,27 +49,34 @@ const iconAdd = () =>{
 // 화살표 메서드 사용
 const viewLyrics = (event) => {
   const songName = event.currentTarget; // 클릭된 요소를 가져옴
-  const lyricsElement = songName.nextElementSibling; // songName과 인접한 요소를 가져옴
-  const DownIcon = songName.firstElementChild;     // 해당 요소의 첫 번째 자식 엘리먼트 노드를 반환
-  const UpIcon = songName.lastElementChild;        // 헤딩 요소의 마지막 자식 엘리먼트 노드를 반환
+  const lyricsElement = songName.nextElementSibling; // songName의 다음 형제 엘리먼트 노드 반환
+  const DownIcon = songName.firstElementChild;     // songName의 첫 번째 자식 엘리먼트 노드 반환
+  const UpIcon = songName.lastElementChild;        // songName의 마지막 자식 엘리먼트 노드 반환
 
    // 인접한 p 요소가 있을 경우에만 동작
    if (lyricsElement) {
       const computedStyle = window.getComputedStyle(lyricsElement);
 
-      if (computedStyle.display === 'none') {
+      if (computedStyle.visibility === 'hidden') {
           DownIcon.style.display = 'inline-block';
           UpIcon.style.display = 'none';
-          lyricsElement.style.display = 'block'
-          setTimeout(() => {
-            lyricsElement.classList.add('lyrics-visible');
-          }, 10);
+          lyricsElement.classList.add('lyrics-container-visible');
       } 
       else {
           UpIcon.style.display = 'inline-block';
           DownIcon.style.display = 'none';
-          lyricsElement.style.display = 'none';
-          lyricsElement.classList.remove('lyrics-visible');
+          lyricsElement.classList.remove('lyrics-container-visible');
       }
   }
 }
+
+class Node{
+  constructor(data){
+    this.data = data;
+    this.next = null;
+  }
+}
+
+const node1 = new node("https://weverse.io/plave/notice/19099");
+const node2 = new node("https://weverse.io/plave/notice/19099");
+const node3 = new node("https://weverse.io/plave/notice/19099");
