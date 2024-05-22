@@ -191,17 +191,7 @@ a{
     justify-content: center;
 }
 
-.official-container{
-    display: inline-block;
-    text-align: center;
-}
-
-.official-container h3{
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-.official-container i{
+.official_wrraper i{
     padding-right: 5px;
     color: cornflowerblue;
 }

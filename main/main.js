@@ -14,7 +14,7 @@ textNode1.next = textNode2;
 textNode2.next = textNode3;
 textNode3.next = textNode1;
 
-let currenTextNode = textNode1;
+let currentTextNode = textNode1;
 
 // 주소 연결 리스트 생성
 const hrefNode1 = new Node("https://weverse.io/plave/notice/19487");
@@ -29,9 +29,9 @@ let currentHrefNode = hrefNode1;
 
 const printNode =  () =>{
   const official = document.getElementById("official");
-  official.textContent = currenTextNode.data;  // 텍스트 변경
+  official.textContent = currentTextNode.data;  // 텍스트 변경
   official.setAttribute("href",currentHrefNode.data);  // 주소 변경
   // 다음 노드로 포인터 변경
-  currenTextNode = currenTextNode.next;        
+  currentTextNode = currentTextNode.next;        
   currentHrefNode =  currentHrefNode.next;
 }

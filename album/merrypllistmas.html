@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Asterum</title>
 </head>
 <body>
@@ -71,7 +72,7 @@
         <header class="track-list-container font-name">TRACK LIST</header>
 
         <section>
-            <div class="song-title" onclick="viewLyrics(event)">
+            <div class="song-title">
                 Merry PLLIstmas
             </div>
 
@@ -176,8 +177,13 @@
         </section>
     </article>
 
+     <!--각 섹션에 아이콘 & 이벤트 리스너 추가-->s
     <script>
         iconAdd();
+        const elements = document.querySelectorAll('.song-title, .song-name');
+            elements.forEach(element => {
+            element.addEventListener('click', viewLyrics);
+            });
     </script>
 </body>
 </html>
