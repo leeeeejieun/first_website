@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Asterum</title>
 </head>
@@ -876,14 +875,7 @@
         </section>
     </article>
 
-      <!--각 섹션에 아이콘 & 이벤트 리스너 추가-->
-      <script>
-        iconAdd();
-        const elements = document.querySelectorAll('.song-title, .song-name');
-            elements.forEach(element => {
-            element.addEventListener('click', viewLyrics);
-            });
-    </script>  
-    
+    <!--HTML 문서가 로드된 후 js 파일이 실행되야 하므로 마지막에 위치-->
+    <script src="script.js"></script>
 </body>
 </html>

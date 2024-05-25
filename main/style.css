@@ -35,7 +35,7 @@ a{
     justify-content: center;      /* 수평 방향으로 가운데 정렬 */
     align-items: center;          /* 수직 방향으로 가운데 정렬  */  
     /* 화면에 표시될 우선 순위를 지정하는 것으로, header 영역의 요소들이 다른 요소 보다 우선적으로 표시됨*/
-    z-index: 1;  
+    z-index: 100;  
 }
 
 .logo{
@@ -79,13 +79,13 @@ a{
 .title{
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 800;
     border-bottom: 1px solid gray;
     padding-bottom: 5px;
+    margin-bottom: 1rem;
 }
 
-.member{
-    margin: 1rem 0px 0px 0px;
+.member { 
     display: flex;                 /* item 정렬 */
 }
 
@@ -102,7 +102,7 @@ a{
 
 .item img{
     width: 100%;                 /* 부모인 item 너비에 꽉 차도록 설정*/
-    filter: brightness(85%);     /* 이미지 밝기를 어둡게 조절 */
+    filter: brightness(90%);     /* 이미지 밝기를 어둡게 조절 */
     transition: .3s;
 }
 
@@ -153,9 +153,9 @@ a{
 
 .channel a{
     position: relative;                        /* 자식 요소인 i 태그 위치 조정을 위해 설정*/
-    font-size: 16px;    
+    font-size: 16.5px;    
     margin-bottom: 25px;
-    font-weight: 500;
+    font-weight: 600;
 
 }
 
@@ -175,7 +175,7 @@ a{
     width: 90%;
     height: 0;
     padding-bottom: 56.25%;                   /* 웹 페이지 사이즈가 변해도 16:9 비율 유지*/
-    margin: 20px auto;                         /* 가운데 정렬 */
+    margin: 0px auto 5.5rem;                         /* 가운데 정렬 */
 }
 
 .ifr-container iframe{
@@ -185,10 +185,11 @@ a{
 }
 
 .official_wrraper{
-    margin-top: 7.5rem;
+    margin: 5.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateY(110%);
 }
 
 .official_wrraper i{

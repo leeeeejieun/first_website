@@ -61,6 +61,10 @@ body{
     font-size: 20px;
 }
 
+.show{
+    cursor: pointer;
+}
+
 .wrapper .remember-forgot{
     display: flex;
     justify-content: space-between;

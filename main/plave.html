@@ -2,19 +2,16 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<!-- Google tag (gtag.js) 방문자 분석 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TGKNB4YQT6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-TGKNB4YQT6');
-</script>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="swiper.css">
+<!--icon-->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<script src="script.js"></script>
-<script src="main.js"></script>
+<!--jQuery CDN-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
 </head>
 
 <body>
@@ -55,7 +52,7 @@
 
   <!-- Way 4 luv MV -->
   <div class="ifr-container">
-    <iframe src="https://www.youtube.com/embed/FxB6_qaqHlY?si=FY9uwxAJ-ICIZYXG&autoplay=1" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/FxB6_qaqHlY?si=FY9uwxAJ-ICIZYXG&" frameborder="0" allowfullscreen></iframe>
   </div>
   
   <!--아티스트 정보-->
@@ -95,9 +92,47 @@
     </div>
   </section>
 
-  <!--PLAVE 앨범 슬라이드 정보-->
+  <!--PLAVE 앨범 슬라이드-->
   <section class="plave-container">
     <p class="title">ALBUM</p>
+      <div class="swiper-container">
+        <!--앨범 이미지 및 페이지 이동-->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="../album/asterum_134_1.html"><img src="../photo/asterum_134_1.jpg"></a>
+            <h3 class="album-name">ASTERUM : 134-1</h3>
+            <p class="album-date">2024.02.26</p>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="../album/merrypllistmas.html"><img src="../photo/merrypllistmas.jpg"></a>
+            <h3 class="album-name">Merry PLLIstmas</h3>
+            <p class="album-date">2023.12.12</p>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="../album/asterum_the.html"><img src="../photo/asterum_the.jpg"></a>
+            <h3 class="album-name">ASTERUM : The Shape of Things to Come</h3>
+            <p class="album-date">2023.08.24</p>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="../album/why.html"><img src="../photo/why.jpg"></a>
+            <h3 class="album-name">왜요 왜요 왜?</h3>
+            <p class="album-date">2023.05.25</p>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="../album/asterum_the.html"><img src="../photo/asterum.jpeg"></a>
+            <h3 class="album-name">ASTERUM</h3>
+            <p class="album-date">2023.03.12</p>
+          </div>
+
+        </div>
+      </div>
+      <!--화살표-->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
   </section>
 
    <!--PLAVE 관련 웹 사이트-->
@@ -150,5 +185,8 @@
   })();
   </script>
   <!--End of Tawk.to Script-->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

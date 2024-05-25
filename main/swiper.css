@@ -1,0 +1,49 @@
+.swiper-container {
+    width: 95%;
+    overflow: hidden;
+    margin: 0 auto;
+}   
+
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    color: #fff !important;
+}
+
+.swiper-button-prev::after{
+    position: absolute; 
+    left: 0; 
+    top: 50%;
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+}
+
+.swiper-button-next::after{
+    position: absolute; 
+    right: 0; 
+    top: 50%;
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+}
+
+.album-name{
+    margin-top: 7.5px;
+    font-size: 17px;
+    line-height: 1.15;
+}
+
+.album-date{
+    margin-top: 5px;
+    font-size: 15px;
+    color: #808080;
+}
+
+@media (max-width:900px) { 
+    .swiper-container{
+        margin: 1.5rem 0;
+    }
+}

@@ -72,8 +72,7 @@
 
 .track-list-container{
     padding: 0 3%;
-    margin: 0 1.5rem 5rem 1.5rem;
-    overflow: hidden;
+    margin: 0 1.5rem 7.5rem 1.5rem;
 }
 
 .track-list-container header{
@@ -119,28 +118,26 @@ max-height을 이용해서 슬라이드 구현
 */
 .track-list-container section{
     border-bottom: 1px solid #808080;
-    overflow: hidden;
-
 }
 
+
 .lyrics-container{
-     max-height: 0;
+     height: 0;
      opacity: 0;
-     transition: max-height .5s ease, opacity .5s ease;
+     transition: height .5s ease, opacity .7s ease;
      visibility: hidden;
 }
 
 .lyrics {
-    font-size: 15px;
+    font-size: 14px;
     border-top: 1px solid #808080;
-    padding: 2.5rem;
+    padding: 30px;
     line-height: 1.7;
 }
 
 .lyrics-container-visible {
-    max-height: 3000px;
     opacity: 1;
-    transition: max-height .5s ease, opacity .5s ease;
+    transition: height .5s ease, opacity .7s ease;
     visibility: visible;
 }
 
