@@ -48,7 +48,7 @@ const swiper = new Swiper('.swiper-container', {
     },
 },
   spaceBetween: 30,         // 슬라이드 사이의 여백 20px으로 지정
-  speed : 400,              // 슬라이드 속도 
+  speed : 300,              // 슬라이드 속도 
   loop: true,   
   // nav 화살표 추가                
   navigation: {
@@ -57,6 +57,90 @@ const swiper = new Swiper('.swiper-container', {
     },
 });
 
+
+// 공식 & 커버 영상 주소 배열
+const officialList = [
+  "https://www.youtube.com/embed/FxB6_qaqHlY?",
+  "https://www.youtube.com/embed/KCT3ZagR9-M",
+  "https://www.youtube.com/embed/c_yCRwh97M8", 
+  "https://www.youtube.com/embed/Q_TzqcWKz00", 
+  "https://www.youtube.com/embed/cFm8fTRW_so", 
+  "https://www.youtube.com/embed/I2qgmAh1em0",
+]
+
+const coverList = [
+  "https://www.youtube.com/embed/kAAcl3nIe24",
+  "https://www.youtube.com/embed/aUw8wfmuKPY",
+  "https://www.youtube.com/embed/EajvXC4b3Os",
+  "https://www.youtube.com/embed/EpUaeLOLZ_w",
+  "https://www.youtube.com/embed/4bkEAGNFrf4",
+  "https://www.youtube.com/embed/u1Wp2coFDB4"
+]
+
+// 영상 설명 배열
+const officialContent = [
+  "PLAVE(플레이브) 'WAY 4 LUV' M/V",
+  "PLAVE(플레이브) 'Merry PLLIstmas' Special Video",
+  "PLAVE(플레이브) '여섯 번째 여름 (The 6th Summer)' M/V",
+  "PLAVE (플레이브) '왜요 왜요 왜? (Why?)' | Official Lyric Video",
+  "PLAVE (플레이브) 'Pixel world' | Official Lyric Video",
+  "PLAVE (플레이브) '기다릴게 (Wait For You)' M/V"
+]
+
+const coverContent = [
+  "새소년 ‘난춘 (亂春)’ Covered by PLAVE Yejun ",
+  "페노메코(PENOMECO) '걘 아니야 Pt.2' Covered by PLAVE Noah",
+  "길구봉구 '바람이 불었으면 좋겠어' Covered by PLAVE Bamby",
+  "지코(ZICO) '걘 아니야' Covered by PLAVE Eunho",
+  "윤종신 '오르막길 (Feat. 정인)' Covered by PLAVE Hamin (Prod. 은호)",
+  "DAY6 'Love me or Leave me' Covered by PLAVE Noah & Hamin"
+]
+
+/* 영상 변경 기능 */
+const transVedio = () =>{
+  const currentIframe = $('#video-container');
+  let videoTitle, changeList, changeContent;
+ 
+  if(currentIframe.hasClass('official')){
+    changeList = coverList; 
+    videoTitle = 'COVER SONGS';
+    changeContent = coverContent;
+  }
+  else{
+    changeList = officialList; 
+    videoTitle = 'OFFICIAL M/V';
+    changeContent = officialContent;
+  }
+
+  currentIframe.toggleClass('official');
+
+  $('.video').each(function(index){
+    $(this).attr('src',changeList[index]);
+  });
+
+  setTimeout(()=>{
+    $('.video-content').each(function(index){
+      $(this).text(changeContent[index]);
+    });
+  },2000);
+
+  $('.transfer').text(videoTitle);
+}
+
 $(function(){
-  setInterval(printNode, 3000);  // 3초마다 printNode 함수 호출(공지사항 반복)
+   // 3초마다 printNode 함수 호출(공지사항 반복)
+  setInterval(printNode, 3000); 
+
+  // 공식 뮤비 영상(기본 세팅)
+  $('.video-grid-item').each(function(index){
+    $(this).append(
+        $('<iframe>').addClass('video').attr({
+          'src': officialList[index],
+          'frameborder': '0'
+        }),
+        $('<p>').addClass('video-content').text(officialContent[index])
+    );
+  });
+
+  $('.transfer').on('click',transVedio);
 });

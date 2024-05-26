@@ -197,6 +197,22 @@ a{
     color: cornflowerblue;
 }
 
+#video-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3.5rem 2.5rem;
+}
+
+.video{
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+
+.video-content{
+    font-size: 12px;
+}
+
 /* 
    웹 페이지의 너비가 900px 이하인 경우에 적용되는 스타일을 정의
    미디어 쿼리를 사용하여 반응형 디자인 구현
@@ -263,7 +279,6 @@ a{
         opacity: 1;                  
         transition-delay: calc(.1s * var(--i));   /* 각 요소의 전환 효과 타이밍 조정 */
     }
-    
 
     .member{
         flex-wrap: wrap;       /* 줄바꿈 적용 */
@@ -288,5 +303,9 @@ a{
 
     .item:hover .member-name{
         display: block;
+    }
+
+    #video-container{
+        grid-template-columns: repeat(1,1fr);
     }
 }
